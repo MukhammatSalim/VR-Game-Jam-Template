@@ -44,9 +44,10 @@ namespace UnityEngine.XR.Content.Interaction
         JointLimits m_OpenDoorLimits;
         JointLimits m_ClosedDoorLimits;
         bool m_Closed = false;
+        public bool isClosedOnStart;
         float m_LastHandleValue = 1.0f;
 
-        bool m_Locked = false;
+        public bool m_Locked = false;
 
         GameObject m_KeySocket;
         IXRSelectInteractable m_Key;
@@ -72,7 +73,7 @@ namespace UnityEngine.XR.Content.Interaction
             m_ClosedDoorLimits.max = 0.0f;
             m_DoorJoint.limits = m_ClosedDoorLimits;
             m_KeyKnob.SetActive(false);
-            m_Closed = true;
+            m_Closed = false;
         }
 
         void Update()
@@ -166,6 +167,10 @@ namespace UnityEngine.XR.Content.Interaction
         {
             m_KnobInteractor = null;
             m_KnobInteractorAttachTransform = null;
+        }
+        public void UnlockDoors()
+        {
+            m_Locked = false;
         }
     }
 }
