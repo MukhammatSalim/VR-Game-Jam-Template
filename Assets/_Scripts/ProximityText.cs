@@ -7,7 +7,11 @@ public class ProximityText : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") text.SetActive(true);
+        Debug.Log(other.gameObject + " encountered");
+        if (other.tag == "Player") {
+            text.SetActive(true);
+            Debug.Log(other.gameObject + "is player");
+            } else Debug.Log(other.gameObject + "is not a player");
     }
     private void OnTriggerExit(Collider other)
     {

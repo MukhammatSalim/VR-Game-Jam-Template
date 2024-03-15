@@ -10,18 +10,33 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 560242737724263099, guid: 7a9d4c33992717e4d9614c70f426b31c,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 560242737724263099, guid: 7a9d4c33992717e4d9614c70f426b31c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.36999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 560242737724263099, guid: 7a9d4c33992717e4d9614c70f426b31c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.36999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 560242737724263099, guid: 7a9d4c33992717e4d9614c70f426b31c,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.37
+      value: 22.153
       objectReference: {fileID: 0}
     - target: {fileID: 560242737724263099, guid: 7a9d4c33992717e4d9614c70f426b31c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.416275
+      value: 7.669
       objectReference: {fileID: 0}
     - target: {fileID: 560242737724263099, guid: 7a9d4c33992717e4d9614c70f426b31c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.674812
+      value: -23.25
       objectReference: {fileID: 0}
     - target: {fileID: 560242737724263099, guid: 7a9d4c33992717e4d9614c70f426b31c,
         type: 3}
@@ -58,6 +73,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 560242737724263099, guid: 7a9d4c33992717e4d9614c70f426b31c,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 900251135708273882, guid: 7a9d4c33992717e4d9614c70f426b31c,
         type: 3}
       propertyPath: Act.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -83,12 +103,39 @@ PrefabInstance:
       propertyPath: Act.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6775661087359232644, guid: 7a9d4c33992717e4d9614c70f426b31c,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.35464948
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775661087359232644, guid: 7a9d4c33992717e4d9614c70f426b31c,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -1.5972572e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775661087359232644, guid: 7a9d4c33992717e4d9614c70f426b31c,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.30464983
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775661087359232644, guid: 7a9d4c33992717e4d9614c70f426b31c,
+        type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7283488124707486425, guid: 7a9d4c33992717e4d9614c70f426b31c,
         type: 3}
       propertyPath: m_Name
       value: BasicFire Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9147640851415186966, guid: 7a9d4c33992717e4d9614c70f426b31c,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 900251135708273882, guid: 7a9d4c33992717e4d9614c70f426b31c, type: 3}
+    - {fileID: 1960137579644195908, guid: 7a9d4c33992717e4d9614c70f426b31c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -96,6 +143,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8128827217225959691}
+    - targetCorrespondingSourceObject: {fileID: 7283488124707486425, guid: 7a9d4c33992717e4d9614c70f426b31c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4105964223072493783}
   m_SourcePrefab: {fileID: 100100000, guid: 7a9d4c33992717e4d9614c70f426b31c, type: 3}
 --- !u!1 &2895100972378752712 stripped
 GameObject:
@@ -199,3 +250,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4105964223072493783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2895100972378752712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bbe463b0a0c5e743b2d4536e980ee9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystem: {fileID: 0}
+  sphereCollider: {fileID: 0}
+  currentEmission: 0
