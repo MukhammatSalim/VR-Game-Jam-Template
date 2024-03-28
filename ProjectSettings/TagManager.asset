@@ -9,6 +9,7 @@ TagManager:
   - Water
   - Destroyer
   - Extinguisher
+  - Ceiling
   layers:
   - Default
   - TransparentFX
