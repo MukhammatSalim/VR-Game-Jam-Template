@@ -10,6 +10,8 @@ public class PowerSocketScript : MonoBehaviour
         if(other.name == "Plug")
         {
             connectedFire.IsSafeForWater = true;
+            Debug.Log("Fire is safe to extinguish");
+            gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 }
