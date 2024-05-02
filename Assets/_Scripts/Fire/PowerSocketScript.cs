@@ -11,7 +11,8 @@ public class PowerSocketScript : MonoBehaviour
         {
             connectedFire.IsSafeForWater = true;
             Debug.Log("Fire is safe to extinguish");
-            gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            other.GetComponent<Rigidbody>().isKinematic = false;
+            other.GetComponent<Rigidbody>().useGravity = true;
         }
     }
 }

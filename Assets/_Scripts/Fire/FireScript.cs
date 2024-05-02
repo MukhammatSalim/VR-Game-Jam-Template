@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 public enum FireType
 {
@@ -13,6 +14,7 @@ public class FireScript : MonoBehaviour
 
     [Header("Connections")]
     GameManager gameManager;
+    public GameObject CloseText;
 
     [Header("Particle system")]
     [SerializeField] new ParticleSystem particleSystem;
@@ -33,6 +35,7 @@ public class FireScript : MonoBehaviour
     [Header("Electric Fire")]
     public GameObject Plug;
     public bool IsSafeForWater;
+    bool IsWronglyExtinguished;
 
     private void Start()
     {
@@ -90,7 +93,13 @@ public class FireScript : MonoBehaviour
                         }
                         else
                         {
-                            gameObject.transform.localScale *= 2f;
+                            if (IsWronglyExtinguished == false)
+                            {
+                                Debug.Log("Wrong tool");
+                                CloseText.GetComponentInChildren<TMP_Text>().text = "Вы неправильно потушили пожар. Электроприбор нужно сначала выключить";
+                                gameObject.transform.localScale *= 2f;
+                                IsWronglyExtinguished = true;
+                            }
                         }
                     }
                     ExtinguishBy(other, "Extinguisher");
