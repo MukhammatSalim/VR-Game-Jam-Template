@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class MenuManager : MonoBehaviour
 {
+    public static MenuManager instance;
     [Header("Menus")]
     public GameObject AgeMenu;
     public GameObject Language;
@@ -17,6 +18,7 @@ public class MenuManager : MonoBehaviour
     public GameObject GKlvls;
     [Header("Operations")]
     public GameObject CurrentActiveMenu;
+    public UserData userdata;
 
     public void ChangeLangage(bool IsEng)
     {

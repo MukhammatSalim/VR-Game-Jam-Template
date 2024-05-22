@@ -9,6 +9,7 @@ public class SupportiveFallingObj : MonoBehaviour
         if (gameObject.GetComponent<Rigidbody>() == null) { 
             gameObject.AddComponent<Rigidbody>();
             gameObject.GetComponent<Rigidbody>().useGravity = false;
+            gameObject.GetComponent<Rigidbody>().isKinematic = true;
             }
     }
     private void OnCollisionEnter(Collision other)
@@ -16,6 +17,7 @@ public class SupportiveFallingObj : MonoBehaviour
         if (other.transform.tag == "Ceiling")
         {
             gameObject.GetComponent<Rigidbody>().useGravity = true;
+            gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 }

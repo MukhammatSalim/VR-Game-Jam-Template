@@ -26,4 +26,7 @@ public class LocalisationScript : MonoBehaviour
             }
         }
     }
+    private void OnEnable() {
+        Localise();
+    }
 }

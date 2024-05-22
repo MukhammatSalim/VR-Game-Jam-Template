@@ -11,8 +11,10 @@ public enum GameState
 public class GameManager : MonoBehaviour
 {
     [Header ("General")]
+    public static GameManager Instance;
     public GameState CurrentGameState;
     public AudioSource audioSource;
+    public UserData userData;
     
     private bool _next;
     [Header ("Fire")]
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour
 
 
     private void Awake() {
+        if (Instance == null) Instance = this;
     }
     private void Start()
     {

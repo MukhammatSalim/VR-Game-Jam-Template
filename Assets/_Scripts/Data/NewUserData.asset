@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NewUserData
   m_EditorClassIdentifier: 
   lang: 0
-  userAge: 0
+  userAge: 1
