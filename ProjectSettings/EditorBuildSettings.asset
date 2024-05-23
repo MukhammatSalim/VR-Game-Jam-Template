@@ -30,13 +30,13 @@ EditorBuildSettings:
     path: Assets/_Scenes/Fire/Apartment/FIRE_lvl_4.unity
     guid: eaa7f8ac4471f604087df3b3003f29f3
   - enabled: 1
-    path: Assets/_Scenes/Fire/Office/FIRE_lvl_1.unity
+    path: Assets/_Scenes/Fire/Office/FIRE_lvl_1_OFFICE.unity
     guid: c78cff1bd1cef5b4390f560a8f0589d0
   - enabled: 1
     path: Assets/_Scenes/General/G_lvl_1.unity
     guid: 807b0c20462c6ad458b68e8d15bbe7cd
   - enabled: 1
-    path: Assets/_Scenes/EQ/EA_lvl_1.unity
+    path: Assets/_Scenes/EQ/Appartment/EA_lvl_1.unity
     guid: fc0d82b0e4a08f142933bf06691cc3cc
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2238d457089b9494896515a25debf01c,
