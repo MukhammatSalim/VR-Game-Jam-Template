@@ -6,7 +6,7 @@ public class AgeLevelRestrictor : MonoBehaviour
 {
     public List<GameObject> AdultLevels = new List<GameObject>();
     private void OnEnable() {
-        if(MenuManager.instance.userdata.userAge == UserAge.kid){
+        if(UserInfoSinglton.Instance.userData.userAge == UserAge.kid){
             foreach(GameObject level in AdultLevels) {
                 level.SetActive(false);
             }

@@ -8,6 +8,7 @@ public class LocalisationScript : MonoBehaviour
     public List<GameObject> Rus = new List<GameObject>();
 
     public void Localise(){
+        Debug.Log("Current Language: " + UserInfoSinglton.Instance.userData.lang);
         if (UserInfoSinglton.Instance.userData.lang == AppLanguage.English){
             foreach (GameObject go in Eng){
                 go.SetActive(true);
