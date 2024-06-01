@@ -6,22 +6,33 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ExtinguisherController : MonoBehaviour
 {
     public bool IsPinOut;
+    public AudioSource pinOutSound;
     public GameObject WaterPoint;
+    public AudioSource Whoosh;
+    public AudioClip WhooshClip;
+
     [SerializeField] private XRGrabInteractable _pinXR;
     [SerializeField] private Rigidbody _pinrb;
     public Collider PinPlace;
 
+    private void Start()
+    {
+    }
     public void StartSpray(){
         if (IsPinOut){
             WaterPoint.SetActive(true);
+            Whoosh.clip = WhooshClip;
+            Whoosh.Play();
         }
     }
 
     public void StopSpray(){
         WaterPoint.SetActive(false);
+        Whoosh.Stop();
     }
 
     public void RemovePin(){
+        pinOutSound.Play();
         IsPinOut = true;
         _pinXR.retainTransformParent = false;
         _pinrb.useGravity = true;
