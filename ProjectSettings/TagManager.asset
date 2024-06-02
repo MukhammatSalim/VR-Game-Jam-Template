@@ -18,6 +18,8 @@ TagManager:
   - button f1
   - button f6
   - ShakingObject
+  - Fire
+  - Oil
   layers:
   - Default
   - TransparentFX

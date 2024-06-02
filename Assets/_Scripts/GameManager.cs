@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public enum GameState
 {
@@ -25,11 +26,9 @@ public class GameManager : MonoBehaviour
     public GameObject[] FireList;
     public GameObject WinScreenFire;
 
-/*    [Header ("TA")]
-    public Door door;
-    public UnityEvent OnDoorLock;
-    public AudioClip Alarm;
-    public GameObject WinScreen;*/
+   [Header ("GA")]
+    public int Items;
+    public GameObject WinScreenGA;
    
 
 
@@ -98,6 +97,24 @@ public class GameManager : MonoBehaviour
         int x = Random.Range(0, TotalNumberofFire);
         Debug.Log("Got New Fire");
         return x;
+    }
+    public void GoToLevelAfter2()
+    {
+        if (UserInfoSinglton.Instance.userData.userAge == UserAge.adult)
+        {
+            SceneTransitionManager.singleton.GoToScene(7);
+        } else SceneTransitionManager.singleton.GoToScene(0);
+
+    }
+    public void ElectricalFireWin(){
+        WinScreenFire.SetActive(true);
+    }
+    public void CheckNewItem(int amount){
+        Items += amount;
+        if (Items == 13) ShowWinScreen(WinScreenGA);
+    }
+    public void ShowWinScreen(GameObject WinScreen){
+        WinScreen.SetActive(true);
     }
 
 /*    IEnumerator Earthquake()

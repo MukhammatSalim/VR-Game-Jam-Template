@@ -5,19 +5,13 @@ using UnityEngine;
 public class AdjustHeightToAge : MonoBehaviour
 {
     public UserData userdata;
+    public float adultSize = 1.5f;
     private void Start()
     {
-        if (GameManager.Instance != null)
-        {
-            if (GameManager.Instance.userData.userAge == UserAge.kid)
-                transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
-            else transform.localScale = new Vector3(1f, 1f, 1f);
-        }
-        else 
-        {
+        
             if (userdata.userAge == UserAge.kid)
-                transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
-            else transform.localScale = new Vector3(1f, 1f, 1f);
-        }
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            else transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        
     }
 }

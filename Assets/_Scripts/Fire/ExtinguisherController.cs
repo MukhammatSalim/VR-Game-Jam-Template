@@ -32,7 +32,7 @@ public class ExtinguisherController : MonoBehaviour
     }
 
     public void RemovePin(){
-        pinOutSound.Play();
+        if (pinOutSound != null) pinOutSound.Play();
         IsPinOut = true;
         _pinXR.retainTransformParent = false;
         _pinrb.useGravity = true;

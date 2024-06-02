@@ -73,4 +73,9 @@ public class EAGameManager : MonoBehaviour
         HandScreens[1].SetActive(false);
         HandScreens[2].SetActive(true);
     }
+    public void GoAfterEA1(){
+        if (UserInfoSinglton.Instance.userData.userAge == UserAge.adult)
+         SceneTransitionManager.singleton.GoToScene(10);
+         else SceneTransitionManager.singleton.GoToScene(0);
+    }
 }

@@ -21,10 +21,18 @@ public class MenuManager : MonoBehaviour
     public GameObject GKlvls;
     [Header("Operations")]
     public GameObject CurrentActiveMenu;
+    public bool IsFirstTime = true;
 
     private void Start()
     {
-        ChangeMenuTo(StartingMenu);
+        if (IsFirstTime)
+        {
+            ChangeMenuTo(StartingMenu);
+            IsFirstTime = false;
+        }
+        else ChangeMenuTo(MainMenu);
+
+
     }
     public void ChangeLangage(bool IsEng)
     {

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PowerSocketScript : MonoBehaviour
 {
+    public GameObject Plug;
     public FireScript connectedFire;
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("Thing exitted: " + other);
         if(other.name == "Plug")
         {
             connectedFire.IsSafeForWater = true;

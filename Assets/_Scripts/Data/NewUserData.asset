@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d59b754be543d24f9188b1d08f7fa51, type: 3}
   m_Name: NewUserData
   m_EditorClassIdentifier: 
-  lang: 0
-  userAge: 1
+  lang: 1
+  userAge: 2
