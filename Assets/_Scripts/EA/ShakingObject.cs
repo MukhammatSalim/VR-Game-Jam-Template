@@ -17,7 +17,7 @@ public class ShakingObject : MonoBehaviour
 
     IEnumerator Shaking(){
         while(!StopShaking){
-            Debug.Log("Shaking" + Random.Range(0,5));
+            //Debug.Log("Shaking" + Random.Range(0,5));
         rigidbody.AddForce(new Vector3(Random.Range(-ShakingAplitute,ShakingAplitute),Random.Range(-ShakingAplitute,ShakingAplitute),Random.Range(-ShakingAplitute,ShakingAplitute)) * 10);
         yield return new WaitForSeconds(0.2f);
         }

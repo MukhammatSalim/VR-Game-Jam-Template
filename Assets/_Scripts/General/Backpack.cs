@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class Backpack : MonoBehaviour
     public List<GameObject> RequiredItems = new List<GameObject>();
     int ItemAmountRequired;
     int CurrentAmount;
+    public GameObject wrongObjTextRUS;
+    public GameObject wrongObjTextENG;
     public List<Toggle> toggles= new List<Toggle>();
 
     private void Awake() {
@@ -33,7 +36,8 @@ public class Backpack : MonoBehaviour
     }
     void WrongObjectInserted(GameObject obj)
     {
-
+        if (UserInfoSinglton.Instance.userData.lang == AppLanguage.English) wrongObjTextENG.SetActive(true);
+        else wrongObjTextRUS.SetActive(true);
     }
     void WinCondition(){
         

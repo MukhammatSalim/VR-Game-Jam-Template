@@ -8,6 +8,10 @@ public class ShakingObjectsInitializer : MonoBehaviour
     void Start()
     {
         GameObject[] ShakingObjs = GameObject.FindGameObjectsWithTag("ShakingObject");
+        // if (AudioManager.instance != null){
+        //     Debug.Log("PlayingSound");
+        //     AudioManager.instance.Play("EarthquakeSound");
+        // } 
         foreach (GameObject obj in ShakingObjs){
             if (obj.GetComponent<ShakingObject>() == null)
             obj.AddComponent<ShakingObject>();
