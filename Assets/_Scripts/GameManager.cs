@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using UnityEngine.Events;
 
 public enum GameState
 {
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     int NumberofFire;
     public GameObject[] FireList;
     public GameObject WinScreenFire;
+    public UnityEvent Todo;
 
    [Header ("GA")]
     public int Items;
@@ -108,6 +110,7 @@ public class GameManager : MonoBehaviour
     }
     public void ElectricalFireWin(){
         WinScreenFire.SetActive(true);
+
     }
     public void CheckNewItem(int amount){
         Items += amount;

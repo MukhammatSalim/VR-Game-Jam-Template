@@ -1,7 +1,8 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Backpack : MonoBehaviour
@@ -10,9 +11,10 @@ public class Backpack : MonoBehaviour
     public List<GameObject> RequiredItems = new List<GameObject>();
     int ItemAmountRequired;
     int CurrentAmount;
-    public GameObject wrongObjTextRUS;
-    public GameObject wrongObjTextENG;
+    public GameObject WrongObj;
     public List<Toggle> toggles= new List<Toggle>();
+    public UnityEvent RightTodo;
+    public UnityEvent WrongTodo;
 
     private void Awake() {
         ItemAmountRequired = RequiredItems.Count;
@@ -25,6 +27,9 @@ public class Backpack : MonoBehaviour
             else WrongObjectInserted(other.gameObject);
         }
     }
+    private void OnTriggerExit(Collider other) {
+        WrongObj.SetActive(false);
+    }
     void RightObjectInserted(GameObject obj)
     {
         CheckoutObj(obj.GetComponent<Item>().ID);
@@ -36,13 +41,14 @@ public class Backpack : MonoBehaviour
     }
     void WrongObjectInserted(GameObject obj)
     {
-        if (UserInfoSinglton.Instance.userData.lang == AppLanguage.English) wrongObjTextENG.SetActive(true);
-        else wrongObjTextRUS.SetActive(true);
+        WrongObj.SetActive(true);
     }
     void WinCondition(){
-        
+        GameManager.Instance.Todo?.Invoke();
     }
     void CheckoutObj(int ID){
         toggles[ID].isOn = true;
+        toggles[ID].transform.parent.GetChild(0).GetComponent<Image>().color = Color.green;
+        toggles[ID].transform.parent.GetChild(1).GetComponent<Image>().color = Color.green;
     }
 }

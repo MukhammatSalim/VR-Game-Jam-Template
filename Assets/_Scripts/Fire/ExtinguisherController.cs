@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ExtinguisherController : MonoBehaviour
 {
     public bool IsPinOut;
+    bool ispinSoundWas = false;
     public AudioSource pinOutSound;
     public GameObject WaterPoint;
     public AudioSource Whoosh;
@@ -32,8 +33,9 @@ public class ExtinguisherController : MonoBehaviour
     }
 
     public void RemovePin(){
-        if (pinOutSound != null) pinOutSound.Play();
+        if (pinOutSound != null && ispinSoundWas == false) pinOutSound.Play();
         IsPinOut = true;
+        ispinSoundWas = true;
         _pinXR.retainTransformParent = false;
         _pinrb.useGravity = true;
         _pinrb.isKinematic = false;
