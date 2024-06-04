@@ -41,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/EQ/Office/EQ_lvl_1_OFFICE.unity
     guid: a0ccb4a28cf1da74fb4be8cd1907b437
+  - enabled: 1
+    path: Assets/_Scenes/Fire/Office/Fire_lvl_2_OFFICE.unity
+    guid: d1b04c8b44ca93141a1e28d2d61d547e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2238d457089b9494896515a25debf01c,
       type: 2}

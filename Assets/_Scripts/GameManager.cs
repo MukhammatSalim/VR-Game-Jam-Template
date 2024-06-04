@@ -109,6 +109,7 @@ public class GameManager : MonoBehaviour
 
     }
     public void ElectricalFireWin(){
+        Todo?.Invoke();
         WinScreenFire.SetActive(true);
 
     }

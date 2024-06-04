@@ -35,7 +35,7 @@ public class Backpack : MonoBehaviour
         CheckoutObj(obj.GetComponent<Item>().ID);
         obj.SetActive(false);
         CurrentAmount += 1;
-        if (CurrentAmount == ItemAmountRequired) {
+        if (CurrentAmount > ItemAmountRequired) {
             WinCondition();
         }
     }
@@ -48,7 +48,7 @@ public class Backpack : MonoBehaviour
     }
     void CheckoutObj(int ID){
         toggles[ID].isOn = true;
-        toggles[ID].transform.parent.GetChild(0).GetComponent<Image>().color = Color.green;
-        toggles[ID].transform.parent.GetChild(1).GetComponent<Image>().color = Color.green;
+        toggles[ID].transform.parent.GetChild(0).GetComponent<TMP_Text>().color = Color.green;
+        toggles[ID].transform.parent.GetChild(1).GetComponent<TMP_Text>().color = Color.green;
     }
 }
