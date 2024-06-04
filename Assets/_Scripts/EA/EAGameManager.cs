@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class EAGameManager : MonoBehaviour
 {
+    public static EAGameManager instance;
     public List<GameObject> fallingobj;
     public GameObject FallingObjFolder;
     public int NumOfFallingObj;
@@ -12,6 +13,7 @@ public class EAGameManager : MonoBehaviour
     public List<TMP_Text> timerText = new List<TMP_Text>();
     public List<GameObject> HandScreens = new List<GameObject>();
     public AudioSource EQSFX;
+
 
     private void Start()
     {
@@ -77,5 +79,8 @@ public class EAGameManager : MonoBehaviour
         if (UserInfoSinglton.Instance.userData.userAge == UserAge.adult)
          SceneTransitionManager.singleton.GoToScene(10);
          else SceneTransitionManager.singleton.GoToScene(0);
+    }
+    public void Lose(){
+        SceneTransitionManager.singleton.GoToScene(5);
     }
 }
